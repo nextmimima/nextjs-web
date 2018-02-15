@@ -2,6 +2,6 @@ import Layout from '../../components/layouts'
 
 export default () => (
   <Layout>
-    <p>This is the web development page</p>
+    <h1>This is the web development page</h1>
   </Layout>
 )

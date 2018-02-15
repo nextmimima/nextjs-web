@@ -1,5 +1,6 @@
 import Layout from '../components/layouts'
-
+import Link from 'next/link'
+// import fetch from 'isomorphic-unfetch'
 import api from '../api/base'
 
 const Index = props => (
@@ -18,6 +19,9 @@ const Index = props => (
 Index.getInitialProps = async () => {
   const res = await api.get('/posts/find')
   const data = await res.data
+  // const res = await fetch(process.env.API_URL + '/posts/find')
+  // const data = await res.json()
+  // console.log(data)
   return {
     posts: data
   }
